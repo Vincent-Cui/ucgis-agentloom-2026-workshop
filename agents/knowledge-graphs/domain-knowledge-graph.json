@@ -16,12 +16,70 @@
       },
       "relationships": {
         "parent": null,
+        "children": [
+          "knowledge:domain:quickstart-places-observed-at-iso8601",
+          "knowledge:domain:nwis-iv-no-data-sentinel",
+          "knowledge:domain:story-map-must-answer-four-viewer-questions"
+        ]
+      }
+    },
+    {
+      "id": "knowledge:domain:quickstart-places-observed-at-iso8601",
+      "type": "concept",
+      "data": {
+        "title": "Quickstart places use ISO 8601 observed_at",
+        "description": "Three-feature teaching sample; timestamps are ISO 8601 strings with offset for contrast with D1 epoch ms.",
+        "category": "domain-proposed",
+        "path": "docs/domain/proposed/quickstart-places-observed-at-iso8601.md",
+        "tags": [
+          "domain",
+          "proposed"
+        ]
+      },
+      "relationships": {
+        "parent": "knowledge:domain:root",
+        "children": []
+      }
+    },
+    {
+      "id": "knowledge:domain:nwis-iv-no-data-sentinel",
+      "type": "concept",
+      "data": {
+        "title": "NWIS IV no-data sentinel (-999999)",
+        "description": "NWIS IV responses declare a no-data sentinel (variable.noDataValue = -999999) that catalog/ingest code must map to missing values to avoid plotting/aggregating bogus measurements.",
+        "category": "domain-proposed",
+        "path": "docs/domain/proposed/nwis-iv-no-data-sentinel.md",
+        "tags": [
+          "domain",
+          "proposed"
+        ]
+      },
+      "relationships": {
+        "parent": "knowledge:domain:root",
+        "children": []
+      }
+    },
+    {
+      "id": "knowledge:domain:story-map-must-answer-four-viewer-questions",
+      "type": "concept",
+      "data": {
+        "title": "Story maps must answer four viewer questions",
+        "description": "In the current streamflow starter catalog, the narrative sections are technically accurate but are written in terms of JSON paths and codes (e.g., \"value.timeSeries[i]\", \"parameter code 00060\"), so a first-time viewer cannot quickly answer: where did this data come from, what is it, how can I reuse it, and what am I looking at right now. The NWIS snapshot itself embeds a human-facing query URL (value.queryInfo.queryURL) plus site names, units, and timestamps, which are enough to populate a plain-language \"at a glance\" summary without reading JSON structure. The existing storytelling behavior/template is structural (it enforces the presence of sections) but does not specify the minimal viewer questions each story map/catalog should answer at a glance, leading to inconsistent or overly technical narratives.",
+        "category": "domain-proposed",
+        "path": "docs/domain/proposed/story-map-must-answer-four-viewer-questions.md",
+        "tags": [
+          "domain",
+          "proposed"
+        ]
+      },
+      "relationships": {
+        "parent": "knowledge:domain:root",
         "children": []
       }
     }
   ],
   "metadata": {
-    "last_updated": "2026-05-19",
-    "total_nodes": 1
+    "last_updated": "2026-06-02",
+    "total_nodes": 4
   }
 }
